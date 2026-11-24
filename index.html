@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConfusionCloud – Learn, Play & Understand</title>
+  <meta name="description" content="An interactive student learning platform for Programming, Computer Science, Mathematics, and Technology. Master concepts through bite-sized lessons, interactive quizzes, and learning games.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Global Navigation Bar -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#" class="brand-logo" id="nav-brand" aria-label="ConfusionCloud Homepage">
+        <div class="logo-icon-wrap">
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8.5 24C5.46 24 3 21.54 3 18.5C3 15.65 5.16 13.31 7.95 13.04C8.73 8.53 12.65 5 17.5 5C22.68 5 26.92 8.97 27.24 14.12C29.41 14.88 31 16.99 31 19.5C31 22.81 28.31 25.5 25 25.5H8.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 12L18.5 16.5H13.5L16 21" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">ConfusionCloud</span>
+          <span class="brand-tagline">Learn • Play • Understand</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+        <a href="#subjects-section" class="nav-link" id="nav-link-subjects">Subjects</a>
+        <button class="nav-link nav-link-btn nav-link-detective-highlight" id="nav-link-detective">Detective Bureau</button>
+        <a href="#smart-tools-section" class="nav-link" id="nav-link-tools">Smart Tools</a>
+        <button class="nav-link nav-link-btn" id="nav-link-concept-map">Concept Map</button>
+        <button class="nav-link nav-link-btn" id="nav-link-find-mistake">Find Mistake</button>
+        <button class="nav-link nav-link-btn" id="nav-link-gap-detector">Gap Detector</button>
+        <a href="#games-section" class="nav-link" id="nav-link-games">Games</a>
+        <button class="nav-btn nav-btn-outline" id="btn-open-progress" aria-label="View learning progress">
+          <svg class="btn-svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"/>
+            <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"/>
+          </svg>
+          <span>Progress</span>
+          <span class="progress-pill-badge" id="nav-progress-pct">0%</span>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <a href="#subjects-section" class="mobile-nav-link" data-action="close-mobile">Subjects</a>
+      <button class="mobile-nav-link mobile-btn-link" id="mobile-link-detective" data-action="close-mobile">The Detective Bureau</button>
+      <a href="#smart-tools-section" class="mobile-nav-link" data-action="close-mobile">Smart Tools</a>
+      <button class="mobile-nav-link mobile-btn-link" id="mobile-link-concept-map" data-action="close-mobile">Concept Connection Map</button>
+      <button class="mobile-nav-link mobile-btn-link" id="mobile-link-find-mistake" data-action="close-mobile">Find the Mistake</button>
+      <button class="mobile-nav-link mobile-btn-link" id="mobile-link-gap-detector" data-action="close-mobile">Knowledge Gap Detector</button>
+      <a href="#games-section" class="mobile-nav-link" data-action="close-mobile">Learning Games</a>
+      <button class="mobile-nav-link mobile-progress-link" id="mobile-btn-progress">
+        <span>Student Progress</span>
+        <span class="progress-pill-badge" id="mobile-nav-progress-pct">0%</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- VIEW 1: HOMEPAGE VIEW                                        -->
+  <!-- ============================================================ -->
+  <main class="page-view active" id="homepage-view">
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Demystifying STEM for Curious Minds</span>
+        </div>
+        <h1 class="hero-title">Turn Academic Confusion into <span class="highlight-text">Crystal Clarity</span></h1>
+        <p class="hero-description">
+          A focused, distraction-free learning ecosystem designed for students. Master fundamental concepts across Programming, Computer Science, Mathematics, and Modern Technology through step-by-step visual lessons, case investigations, interactive quizzes, and cognitive games.
+        </p>
+        
+        <div class="hero-actions">
+          <a href="#subjects-section" class="btn btn-primary" id="hero-btn-explore">
+            <span>Explore Subjects</span>
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <button class="btn btn-secondary" id="hero-btn-detective">
+            <span>The Detective Bureau</span>
+            <span class="btn-tag">12 Cases</span>
+          </button>
+          <a href="#smart-tools-section" class="btn btn-secondary" id="hero-btn-tools">
+            <span>Smart Learning Tools</span>
+            <span class="btn-tag">3 Tools</span>
+          </a>
+          <button class="btn btn-outline" id="hero-btn-games">
+            <span>Play Games</span>
+            <span class="btn-tag">3 Games</span>
+          </button>
+        </div>
+
+        <!-- Metric Badges Row -->
+        <div class="hero-metrics">
+          <div class="metric-item">
+            <span class="metric-num">4</span>
+            <span class="metric-label">Core Subjects</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-num">21</span>
+            <span class="metric-label">Structured Lessons</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-num">100%</span>
+            <span class="metric-label">Interactive Practice</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-num">Local</span>
+            <span class="metric-label">Progress Saved</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section class="section subjects-section" id="subjects-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-kicker">Core Curricula</span>
+          <h2 class="section-title">Select a Subject to Begin</h2>
+          <p class="section-subtitle">Click any subject card below to enter the dedicated single-page learning interface with comprehensive modules, examples, and quizzes.</p>
+        </div>
+
+        <div class="subjects-grid">
+          
+          <!-- Subject 1: Programming -->
+          <article class="subject-card" data-subject-id="programming" tabindex="0" role="button" aria-label="Open Programming subject module">
+            <div class="subject-card-header">
+              <div class="subject-icon-box icon-programming">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                  <line x1="14" y1="4" x2="10" y2="20"></line>
+                </svg>
+              </div>
+              <span class="subject-lesson-count">6 Lessons</span>
+            </div>
+            <h3 class="subject-title">Programming</h3>
+            <p class="subject-desc">Master foundational coding fundamentals from variables and control flow to reusable functions and dynamic arrays.</p>
+            <div class="subject-topic-tags">
+              <span class="tag">Intro</span>
+              <span class="tag">Variables</span>
+              <span class="tag">Conditionals</span>
+              <span class="tag">Loops</span>
+              <span class="tag">Functions</span>
+              <span class="tag">Arrays</span>
+            </div>
+            <div class="subject-card-footer">
+              <div class="subject-progress-mini">
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" id="card-progress-programming" style="width: 0%;"></div>
+                </div>
+                <span class="progress-label" id="card-label-programming">0/6 Done</span>
+              </div>
+              <span class="card-action-link">Start Learning &rarr;</span>
+            </div>
+          </article>
+
+          <!-- Subject 2: Computer Science -->
+          <article class="subject-card" data-subject-id="computer-science" tabindex="0" role="button" aria-label="Open Computer Science subject module">
+            <div class="subject-card-header">
+              <div class="subject-icon-box icon-cs">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <span class="subject-lesson-count">5 Lessons</span>
+            </div>
+            <h3 class="subject-title">Computer Science</h3>
+            <p class="subject-desc">Explore the theoretical foundations, operating systems, relational data architecture, algorithms, and global networking.</p>
+            <div class="subject-topic-tags">
+              <span class="tag">Fundamentals</span>
+              <span class="tag">Operating Systems</span>
+              <span class="tag">DBMS</span>
+              <span class="tag">Data Structures</span>
+              <span class="tag">Networks</span>
+            </div>
+            <div class="subject-card-footer">
+              <div class="subject-progress-mini">
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" id="card-progress-computer-science" style="width: 0%;"></div>
+                </div>
+                <span class="progress-label" id="card-label-computer-science">0/5 Done</span>
+              </div>
+              <span class="card-action-link">Start Learning &rarr;</span>
+            </div>
+          </article>
+
+          <!-- Subject 3: Mathematics -->
+          <article class="subject-card" data-subject-id="mathematics" tabindex="0" role="button" aria-label="Open Mathematics subject module">
+            <div class="subject-card-header">
+              <div class="subject-icon-box icon-math">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                  <path d="M4 19L9 4l4 16 3-8h4"></path>
+                  <circle cx="18" cy="6" r="2"></circle>
+                </svg>
+              </div>
+              <span class="subject-lesson-count">5 Lessons</span>
+            </div>
+            <h3 class="subject-title">Mathematics</h3>
+            <p class="subject-desc">Bridge abstract mathematics with computation: symbolic algebra, functional relations, probability theory, statistics, and linear matrix algebra.</p>
+            <div class="subject-topic-tags">
+              <span class="tag">Algebra</span>
+              <span class="tag">Functions</span>
+              <span class="tag">Probability</span>
+              <span class="tag">Statistics</span>
+              <span class="tag">Matrices</span>
+            </div>
+            <div class="subject-card-footer">
+              <div class="subject-progress-mini">
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" id="card-progress-mathematics" style="width: 0%;"></div>
+                </div>
+                <span class="progress-label" id="card-label-mathematics">0/5 Done</span>
+              </div>
+              <span class="card-action-link">Start Learning &rarr;</span>
+            </div>
+          </article>
+
+          <!-- Subject 4: Technology -->
+          <article class="subject-card" data-subject-id="technology" tabindex="0" role="button" aria-label="Open Technology subject module">
+            <div class="subject-card-header">
+              <div class="subject-icon-box icon-tech">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                  <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12A10 10 0 0 1 12 2z"></path>
+                  <path d="M12 6v6l4 2"></path>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <span class="subject-lesson-count">5 Lessons</span>
+            </div>
+            <h3 class="subject-title">Technology</h3>
+            <p class="subject-desc">Understand transformative industry breakthroughs: Artificial Intelligence, Elastic Cloud Computing, Cybersecurity, IoT ecosystems, and Machine Learning.</p>
+            <div class="subject-topic-tags">
+              <span class="tag">Artificial Intelligence</span>
+              <span class="tag">Cloud</span>
+              <span class="tag">Cybersecurity</span>
+              <span class="tag">IoT</span>
+              <span class="tag">Machine Learning</span>
+            </div>
+            <div class="subject-card-footer">
+              <div class="subject-progress-mini">
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" id="card-progress-technology" style="width: 0%;"></div>
+                </div>
+                <span class="progress-label" id="card-label-technology">0/5 Done</span>
+              </div>
+              <span class="card-action-link">Start Learning &rarr;</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Feature: The Detective Bureau Section -->
+    <section class="section detective-showcase-section" id="detective-showcase-section">
+      <div class="section-container">
+        <div class="detective-showcase-card">
+          <div class="detective-showcase-left">
+            <div class="detective-kicker-row">
+              <span class="detective-seal-badge">Signature Investigative Module</span>
+              <span class="detective-tier-pills">Beginner &bull; Intermediate &bull; Advanced</span>
+            </div>
+            <h2 class="detective-showcase-title">THE DETECTIVE BUREAU</h2>
+            <p class="detective-showcase-motto">Investigate. Discover. Understand.</p>
+            <p class="detective-showcase-desc">
+              Step into an investigative STEM experience. Instead of answering ordinary multiple-choice questions, open authentic case files across Programming, Computer Science, Mathematics, and Technology. Examine field reports, run diagnostic leads, connect technical evidence, and uncover the academic principles behind every mystery.
+            </p>
+
+            <div class="detective-subject-cases-preview">
+              <div class="preview-subject-chip" data-detective-subject="programming">
+                <span class="chip-sub">Programming</span>
+                <span class="chip-cases">Broken Code &bull; Missing Output &bull; Infinite Loop</span>
+              </div>
+              <div class="preview-subject-chip" data-detective-subject="computer-science">
+                <span class="chip-sub">Computer Science</span>
+                <span class="chip-cases">Missing Bit &bull; Logic Gate &bull; Data Structure</span>
+              </div>
+              <div class="preview-subject-chip" data-detective-subject="mathematics">
+                <span class="chip-sub">Mathematics</span>
+                <span class="chip-cases">Incorrect Calculation &bull; Missing Number &bull; Formula</span>
+              </div>
+              <div class="preview-subject-chip" data-detective-subject="technology">
+                <span class="chip-sub">Technology</span>
+                <span class="chip-cases">Disappearing Data &bull; Network Mystery &bull; Device Failure</span>
+              </div>
+            </div>
+
+            <div class="detective-showcase-actions">
+              <button class="btn btn-primary btn-detective-cta" id="btn-launch-detective-bureau">
+                <span>Enter The Detective Bureau</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="detective-showcase-right">
+            <div class="dossier-summary-panel">
+              <div class="dossier-panel-header">
+                <span class="dossier-stamp">BUREAU RECORD</span>
+                <span class="dossier-rank" id="home-detective-rank">Field Cadet</span>
+              </div>
+              <div class="dossier-metrics-grid">
+                <div class="dossier-metric-box">
+                  <span class="dm-val" id="home-detective-score">0</span>
+                  <span class="dm-lbl">Detective Score</span>
+                </div>
+                <div class="dossier-metric-box">
+                  <span class="dm-val" id="home-detective-solved">0 / 12</span>
+                  <span class="dm-lbl">Solved Cases</span>
+                </div>
+                <div class="dossier-metric-box">
+                  <span class="dm-val" id="home-detective-active">0</span>
+                  <span class="dm-lbl">Active Cases</span>
+                </div>
+                <div class="dossier-metric-box">
+                  <span class="dm-val" id="home-detective-accuracy">0%</span>
+                  <span class="dm-lbl">Accuracy Rate</span>
+                </div>
+              </div>
+              <div class="dossier-workflow-steps">
+                <div class="wf-step"><span class="wf-num">01</span><span>Examine Case Briefing &amp; Clues</span></div>
+                <div class="wf-step"><span class="wf-num">02</span><span>Run Field Investigation Leads</span></div>
+                <div class="wf-step"><span class="wf-num">03</span><span>Make Evidence-Based Decisions</span></div>
+                <div class="wf-step"><span class="wf-num">04</span><span>Uncover Root Cause &amp; Concept</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Smart Learning Tools Section (Explore More) -->
+    <section class="section smart-tools-section" id="smart-tools-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-kicker">Unique STEM Enhancements</span>
+          <h2 class="section-title">Smart Learning Tools</h2>
+          <p class="section-subtitle">ConfusionCloud goes beyond static notes and plain multiple-choice questions. Use these three purpose-built interactive tools to connect concepts, debug errors, and eliminate personal knowledge gaps.</p>
+        </div>
+
+        <div class="smart-tools-grid">
+          
+          <!-- Tool 1: Concept Connection Map -->
+          <article class="smart-tool-card" id="card-tool-concept-map">
+            <div class="smart-tool-badge">Knowledge Graph</div>
+            <div class="smart-tool-icon-wrap icon-tool-map">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+                <circle cx="6" cy="6" r="3"></circle>
+                <circle cx="18" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <circle cx="18" cy="18" r="3"></circle>
+                <line x1="8.7" y1="7.3" x2="15.3" y2="16.7"></line>
+                <line x1="8.7" y1="16.7" x2="15.3" y2="7.3"></line>
+                <line x1="9" y1="6" x2="15" y2="6"></line>
+                <line x1="9" y1="18" x2="15" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="smart-tool-title">Concept Connection Map</h3>
+            <p class="smart-tool-desc">
+              Understand how ideas connect instead of studying in isolation. Explore interactive node graphs for Programming, CS, Mathematics, and Technology with clear prerequisite links and deep explanations.
+            </p>
+            <div class="smart-tool-highlights">
+              <span class="tool-pill">Interactive SVG Network</span>
+              <span class="tool-pill">Cross-Subject Bridges</span>
+              <span class="tool-pill">Direct Lesson Links</span>
+            </div>
+            <button class="btn btn-primary smart-tool-btn" id="btn-launch-concept-map">
+              <span>Explore Concept Map</span>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+          </article>
+
+          <!-- Tool 2: Find the Mistake -->
+          <article class="smart-tool-card" id="card-tool-find-mistake">
+            <div class="smart-tool-badge">Error Diagnosis</div>
+            <div class="smart-tool-icon-wrap icon-tool-mistake">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                <path d="M4.93 4.93l14.14 14.14" stroke-opacity="0.3"></path>
+              </svg>
+            </div>
+            <h3 class="smart-tool-title">Find the Mistake</h3>
+            <p class="smart-tool-desc">
+              Test your true mastery by locating the exact flaw in flawed code, fallacious mathematical derivations, and deceptive technical assertions. Discover the cognitive trap and see the correct approach.
+            </p>
+            <div class="smart-tool-highlights">
+              <span class="tool-pill">Clickable Line & Step Inspector</span>
+              <span class="tool-pill">16 Guided Challenges</span>
+              <span class="tool-pill">3 Difficulty Tiers</span>
+            </div>
+            <button class="btn btn-primary smart-tool-btn" id="btn-launch-find-mistake">
+              <span>Start Debugging</span>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+          </article>
+
+          <!-- Tool 3: Knowledge Gap Detector -->
+          <article class="smart-tool-card" id="card-tool-gap-detector">
+            <div class="smart-tool-badge">Adaptive Remediation</div>
+            <div class="smart-tool-icon-wrap icon-tool-detector">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 3a9 9 0 0 1 9 9"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 9v6"></path>
+                <path d="M9 12h6"></path>
+              </svg>
+            </div>
+            <h3 class="smart-tool-title">Knowledge Gap Detector</h3>
+            <p class="smart-tool-desc">
+              Continuously evaluates your quiz answers and checkpoint exercises to pinpoint where your understanding is weak. Recommends exact lessons to review and offers targeted retakes to close each gap.
+            </p>
+            <div class="smart-tool-highlights">
+              <span class="tool-pill">Real-time Performance Analysis</span>
+              <span class="tool-pill">Curated Revision Plans</span>
+              <span class="tool-pill">1-Click Targeted Retests</span>
+            </div>
+            <button class="btn btn-primary smart-tool-btn" id="btn-launch-gap-detector">
+              <span>Detect Knowledge Gaps</span>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section how-it-works-section" id="how-it-works-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-kicker">Pedagogical Framework</span>
+          <h2 class="section-title">How ConfusionCloud Works</h2>
+          <p class="section-subtitle">We replace cognitive overload and rote memorization with a 3-step structured learning method built for genuine retention.</p>
+        </div>
+
+        <div class="steps-grid">
+          
+          <div class="step-card">
+            <div class="step-badge">Step 01</div>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+            </div>
+            <h3 class="step-title">Demystify with First Principles</h3>
+            <p class="step-desc">Each topic begins with a plain-English explanation, relatable everyday metaphors, and real-world context before introducing syntax or mathematical notation.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-badge">Step 02</div>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+                <polyline points="9 11 12 14 22 4"></polyline>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+              </svg>
+            </div>
+            <h3 class="step-title">Interactive Checkpoints</h3>
+            <p class="step-desc">Solidify understanding instantly with bite-sized practice checks at the end of every lesson. Immediate visual validation ensures you never proceed with misconceptions.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-badge">Step 03</div>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="step-title">Reinforce Through Games</h3>
+            <p class="step-desc">Test your diagnostic skills in Code Detective, race the clock in Concept Match, and sharpen analytical reasoning with Logic Quest.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Games Preview Section -->
+    <section class="section games-section" id="games-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-kicker">Gamified Retention</span>
+          <h2 class="section-title">Cognitive Learning Games</h2>
+          <p class="section-subtitle">Play interactive mini-games engineered to test debugging skills, vocabulary retention, and algorithmic deduction.</p>
+        </div>
+
+        <div class="games-grid">
+          
+          <!-- Game 1: Code Detective -->
+          <div class="game-card">
+            <div class="game-card-tag">Code Debugging</div>
+            <div class="game-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="12"></line>
+                <circle cx="11" cy="15" r="0.5" fill="currentColor"></circle>
+              </svg>
+            </div>
+            <h3 class="game-title">Code Detective</h3>
+            <p class="game-desc">Examine realistic code samples, identify subtle logic errors or syntax traps, and choose the correct remedy to solve the case.</p>
+            <div class="game-stats-row">
+              <span class="game-stat">4 Mystery Rounds</span>
+              <span class="game-stat-dot">•</span>
+              <span class="game-stat">Immediate Code Diffs</span>
+            </div>
+            <button class="btn btn-primary btn-game-launch" data-game-target="code-detective">Play Code Detective</button>
+          </div>
+
+          <!-- Game 2: Concept Match -->
+          <div class="game-card">
+            <div class="game-card-tag">Vocabulary & Terms</div>
+            <div class="game-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </div>
+            <h3 class="game-title">Concept Match</h3>
+            <p class="game-desc">Connect technical STEM terms with their exact definitions. Build rapid recall across all four subject decks under a live timer.</p>
+            <div class="game-stats-row">
+              <span class="game-stat">Multiple Decks</span>
+              <span class="game-stat-dot">•</span>
+              <span class="game-stat">Pair Matching</span>
+            </div>
+            <button class="btn btn-primary btn-game-launch" data-game-target="concept-match">Play Concept Match</button>
+          </div>
+
+          <!-- Game 3: Logic Quest -->
+          <div class="game-card">
+            <div class="game-card-tag">Deduction & Reasoning</div>
+            <div class="game-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h3 class="game-title">Logic Quest</h3>
+            <p class="game-desc">Tackle bite-sized algorithmic brain-teasers, state machines, and truth-table paradoxes that develop computational thinking.</p>
+            <div class="game-stats-row">
+              <span class="game-stat">Step-by-step Hints</span>
+              <span class="game-stat-dot">•</span>
+              <span class="game-stat">Critical Thinking</span>
+            </div>
+            <button class="btn btn-primary btn-game-launch" data-game-target="logic-quest">Play Logic Quest</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="brand-text">
+              <span class="brand-name">ConfusionCloud</span>
+              <span class="brand-tagline">Learn, Play & Understand</span>
+            </div>
+            <p class="footer-mission">
+              Dedicated to transforming confusing STEM concepts into clear, lasting intuition through active learning and purposeful play.
+            </p>
+          </div>
+
+          <div class="footer-links-col">
+            <h4 class="footer-col-title">Subjects</h4>
+            <ul class="footer-nav-list">
+              <li><button class="footer-link-btn" data-subject-target="programming">Programming</button></li>
+              <li><button class="footer-link-btn" data-subject-target="computer-science">Computer Science</button></li>
+              <li><button class="footer-link-btn" data-subject-target="mathematics">Mathematics</button></li>
+              <li><button class="footer-link-btn" data-subject-target="technology">Technology</button></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col">
+            <h4 class="footer-col-title">Smart Tools</h4>
+            <ul class="footer-nav-list">
+              <li><button class="footer-link-btn" id="footer-btn-detective">The Detective Bureau</button></li>
+              <li><button class="footer-link-btn" id="footer-btn-concept-map">Concept Connection Map</button></li>
+              <li><button class="footer-link-btn" id="footer-btn-find-mistake">Find the Mistake</button></li>
+              <li><button class="footer-link-btn" id="footer-btn-gap-detector">Knowledge Gap Detector</button></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col">
+            <h4 class="footer-col-title">Interactive</h4>
+            <ul class="footer-nav-list">
+              <li><button class="footer-link-btn" data-game-target="code-detective">Code Detective</button></li>
+              <li><button class="footer-link-btn" data-game-target="concept-match">Concept Match</button></li>
+              <li><button class="footer-link-btn" data-game-target="logic-quest">Logic Quest</button></li>
+              <li><button class="footer-link-btn" id="footer-btn-progress">Student Dashboard</button></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col">
+            <h4 class="footer-col-title">Platform</h4>
+            <ul class="footer-nav-list">
+              <li><button class="footer-link-btn" id="footer-reset-data">Reset Progress</button></li>
+              <li><span class="footer-note">Client-side LocalStorage</span></li>
+              <li><span class="footer-note">Free & Accessible</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 ConfusionCloud. Designed for student excellence with focus and clarity.</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- VIEW 2: DEDICATED SUBJECT LEARNING INTERFACE (SPA)           -->
+  <!-- When active, homepage-view is HIDDEN (display:none)          -->
+  <!-- ============================================================ -->
+  <div class="page-view" id="subject-view">
+    
+    <!-- Top Persistent Subject Navigation Bar -->
+    <header class="subject-header">
+      <div class="subject-header-container">
+        
+        <button class="btn btn-back-subjects" id="btn-back-to-subjects" aria-label="Return to all subjects on homepage">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+          </svg>
+          <span>Back to Subjects</span>
+        </button>
+
+        <div class="subject-header-meta">
+          <span class="subject-pill-tag" id="subject-header-badge">Programming</span>
+          <h2 class="subject-header-title" id="subject-header-title">Programming Fundamentals</h2>
+        </div>
+
+        <!-- Subject Mode Tabs: Lessons vs Quiz -->
+        <div class="subject-mode-tabs" role="tablist">
+          <button class="mode-tab active" id="tab-lessons" role="tab" aria-selected="true" aria-controls="subject-lessons-panel">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+              <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
+            </svg>
+            <span>Lessons (<span id="subject-lessons-counter">0/6</span>)</span>
+          </button>
+          <button class="mode-tab" id="tab-quiz" role="tab" aria-selected="false" aria-controls="subject-quiz-panel">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+            </svg>
+            <span>Subject Quiz</span>
+            <span class="quiz-score-badge" id="subject-quiz-status-pill">Untested</span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Subject Learning Body Container -->
+    <div class="subject-layout-container">
+      
+      <!-- Left Sidebar: Lessons Navigation List -->
+      <aside class="subject-sidebar" id="subject-sidebar" aria-label="Lesson list">
+        <div class="sidebar-header">
+          <span class="sidebar-kicker">Curriculum Topics</span>
+          <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close sidebar">✕</button>
+        </div>
+        <ul class="lesson-nav-list" id="lesson-nav-list" role="tablist">
+          <!-- Dynamically populated by script.js -->
+        </ul>
+        <div class="sidebar-quiz-cta">
+          <div class="cta-inner">
+            <span class="cta-kicker">Knowledge Verification</span>
+            <p class="cta-text">Finished reading? Test your mastery with the comprehensive quiz.</p>
+            <button class="btn btn-secondary btn-block" id="sidebar-take-quiz-btn">Take Subject Quiz</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Sidebar Toggle for Mobile View -->
+      <button class="sidebar-mobile-toggle" id="sidebar-mobile-toggle" aria-label="Toggle Lesson List">
+        <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+        </svg>
+        <span>Lesson Menu</span>
+      </button>
+
+      <!-- Main Learning Content Area -->
+      <main class="subject-content-area">
+        
+        <!-- Tab Panel 1: Active Lesson Content Panel -->
+        <div class="subject-tab-panel active" id="subject-lessons-panel" role="tabpanel">
+          
+          <div class="lesson-card-wrapper" id="lesson-card-wrapper">
+            <!-- Dynamically populated with complete educational content by script.js -->
+          </div>
+
+          <!-- Bottom Navigation Between Lessons -->
+          <div class="lesson-bottom-nav">
+            <button class="btn btn-outline" id="btn-prev-lesson">
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Previous Lesson</span>
+            </button>
+
+            <button class="btn btn-primary" id="btn-complete-and-next">
+              <span id="label-next-lesson">Mark Complete & Next</span>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Tab Panel 2: Interactive Subject Quiz Panel -->
+        <div class="subject-tab-panel" id="subject-quiz-panel" role="tabpanel">
+          
+          <div class="quiz-container-card" id="quiz-container-card">
+            <!-- Quiz state dynamically managed by script.js -->
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- VIEW 3: DEDICATED LEARNING GAMES VIEW                        -->
+  <!-- ============================================================ -->
+  <div class="page-view" id="games-view">
+    <header class="games-view-header">
+      <div class="games-header-container">
+        <button class="btn btn-back-subjects" id="btn-back-from-games">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+          </svg>
+          <span>Back to Home</span>
+        </button>
+
+        <div class="games-nav-tabs" role="tablist">
+          <button class="game-selector-tab active" data-game="code-detective" role="tab">
+            <span>Code Detective</span>
+          </button>
+          <button class="game-selector-tab" data-game="concept-match" role="tab">
+            <span>Concept Match</span>
+          </button>
+          <button class="game-selector-tab" data-game="logic-quest" role="tab">
+            <span>Logic Quest</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="game-arena-container">
+      
+      <!-- Game 1: Code Detective Arena -->
+      <section class="game-panel active" id="game-panel-code-detective">
+        <div class="game-arena-card" id="code-detective-arena">
+          <!-- Rendered by script.js -->
+        </div>
+      </section>
+
+      <!-- Game 2: Concept Match Arena -->
+      <section class="game-panel" id="game-panel-concept-match">
+        <div class="game-arena-card" id="concept-match-arena">
+          <!-- Rendered by script.js -->
+        </div>
+      </section>
+
+      <!-- Game 3: Logic Quest Arena -->
+      <section class="game-panel" id="game-panel-logic-quest">
+        <div class="game-arena-card" id="logic-quest-arena">
+          <!-- Rendered by script.js -->
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- VIEW 4: CONCEPT CONNECTION MAP VIEW (SPA)                    -->
+  <!-- ============================================================ -->
+  <div class="page-view" id="concept-map-view">
+    <header class="tool-view-header">
+      <div class="tool-header-container">
+        <button class="btn btn-back-subjects" id="btn-back-from-concept-map" aria-label="Return to homepage">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+          </svg>
+          <span>Back to Home</span>
+        </button>
+
+        <div class="tool-header-meta">
+          <span class="tool-pill-tag">Interactive Knowledge Web</span>
+          <h2 class="tool-header-title">Concept Connection Map</h2>
+        </div>
+
+        <!-- Subject Filter Tabs for Concept Map -->
+        <div class="concept-map-filters" role="tablist" aria-label="Filter concept map by subject">
+          <button class="map-filter-tab active" data-map-subject="all" role="tab" aria-selected="true">All Concepts</button>
+          <button class="map-filter-tab" data-map-subject="programming" role="tab" aria-selected="false">Programming</button>
+          <button class="map-filter-tab" data-map-subject="computer-science" role="tab" aria-selected="false">Computer Science</button>
+          <button class="map-filter-tab" data-map-subject="mathematics" role="tab" aria-selected="false">Mathematics</button>
+          <button class="map-filter-tab" data-map-subject="technology" role="tab" aria-selected="false">Technology</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="tool-arena-container concept-map-layout">
+      <!-- Left/Main Visual Graph Area -->
+      <section class="concept-graph-pane">
+        <div class="graph-toolbar">
+          <div class="graph-legend">
+            <span class="legend-item"><span class="legend-dot dot-prog"></span><span>Programming</span></span>
+            <span class="legend-item"><span class="legend-dot dot-cs"></span><span>Computer Science</span></span>
+            <span class="legend-item"><span class="legend-dot dot-math"></span><span>Mathematics</span></span>
+            <span class="legend-item"><span class="legend-dot dot-tech"></span><span>Technology</span></span>
+          </div>
+          <div class="graph-controls">
+            <button class="graph-btn-control" id="btn-map-zoom-in" title="Zoom in" aria-label="Zoom in">+</button>
+            <button class="graph-btn-control" id="btn-map-zoom-out" title="Zoom out" aria-label="Zoom out">−</button>
+            <button class="graph-btn-control" id="btn-map-reset" title="Reset view" aria-label="Reset view">⟲ Reset</button>
+          </div>
+        </div>
+
+        <div class="concept-map-canvas-wrap" id="concept-map-canvas-wrap">
+          <svg id="concept-map-svg" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <marker id="arrow-prog" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2D6A4F" />
+              </marker>
+              <marker id="arrow-cs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2B5C8F" />
+              </marker>
+              <marker id="arrow-math" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#B94A3E" />
+              </marker>
+              <marker id="arrow-tech" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#C59B27" />
+              </marker>
+              <marker id="arrow-cross" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#6C7D73" />
+              </marker>
+            </defs>
+            <g id="map-quadrants-group"></g>
+            <g id="map-edges-group"></g>
+            <g id="map-nodes-group"></g>
+          </svg>
+        </div>
+
+        <div class="map-helper-hint">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+          <span>Click any concept node to inspect its definition and links. Drag or swipe the canvas to pan, and use + / − to zoom.</span>
+        </div>
+      </section>
+
+      <!-- Right Inspector Panel -->
+      <aside class="concept-inspector-pane" id="concept-inspector-pane">
+        <!-- Rendered dynamically by script.js based on selected node -->
+      </aside>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- VIEW 5: FIND THE MISTAKE CHALLENGES VIEW (SPA)               -->
+  <!-- ============================================================ -->
+  <div class="page-view" id="find-mistake-view">
+    <header class="tool-view-header">
+      <div class="tool-header-container">
+        <button class="btn btn-back-subjects" id="btn-back-from-find-mistake" aria-label="Return to homepage">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+          </svg>
+          <span>Back to Home</span>
+        </button>
+
+        <div class="tool-header-meta">
+          <span class="tool-pill-tag">Cognitive Debugging</span>
+          <h2 class="tool-header-title">Find the Mistake</h2>
+        </div>
+
+        <div class="mistake-header-score">
+          <span class="score-label">Solved:</span>
+          <span class="score-val" id="mistake-solved-counter">0 / 16</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="tool-arena-container find-mistake-layout">
+      <!-- Filter and Stepper Controls -->
+      <div class="mistake-filter-strip">
+        <div class="filter-group">
+          <span class="filter-lbl">Subject:</span>
+          <div class="filter-pills" id="mistake-subject-filters">
+            <button class="filter-pill active" data-filter-subject="all">All</button>
+            <button class="filter-pill" data-filter-subject="programming">Programming</button>
+            <button class="filter-pill" data-filter-subject="computer-science">Computer Science</button>
+            <button class="filter-pill" data-filter-subject="mathematics">Mathematics</button>
+            <button class="filter-pill" data-filter-subject="technology">Technology</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-lbl">Difficulty:</span>
+          <div class="filter-pills" id="mistake-difficulty-filters">
+            <button class="filter-pill active" data-filter-diff="all">All</button>
+            <button class="filter-pill" data-filter-diff="Beginner">Beginner</button>
+            <button class="filter-pill" data-filter-diff="Intermediate">Intermediate</button>
+            <button class="filter-pill" data-filter-diff="Advanced">Advanced</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Challenge Carousel Ribbon -->
+      <div class="mistake-stepper-ribbon" id="mistake-stepper-ribbon" role="tablist" aria-label="Select mistake challenge">
+        <!-- Dynamically rendered numbered challenge buttons with completion status -->
+      </div>
+
+      <!-- Main Challenge Card -->
+      <div class="mistake-arena-card" id="mistake-arena-card">
+        <!-- Dynamically populated by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- VIEW 6: KNOWLEDGE GAP DETECTOR VIEW (SPA)                    -->
+  <!-- ============================================================ -->
+  <div class="page-view" id="gap-detector-view">
+    <header class="tool-view-header">
+      <div class="tool-header-container">
+        <button class="btn btn-back-subjects" id="btn-back-from-gap-detector" aria-label="Return to homepage">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+          </svg>
+          <span>Back to Home</span>
+        </button>
+
+        <div class="tool-header-meta">
+          <span class="tool-pill-tag">Adaptive Diagnostics</span>
+          <h2 class="tool-header-title">Knowledge Gap Detector</h2>
+        </div>
+
+        <button class="btn btn-secondary btn-sm" id="btn-run-diagnostic">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+          </svg>
+          <span>Run STEM Diagnostic</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="tool-arena-container gap-detector-layout">
+      <!-- Metric Stats Bar -->
+      <div class="detector-metrics-row">
+        <div class="detector-stat-card">
+          <span class="stat-kicker">Assessments Logged</span>
+          <span class="stat-number" id="gap-stat-total">0</span>
+          <span class="stat-desc">Quizzes, checkpoints & debugging</span>
+        </div>
+        <div class="detector-stat-card">
+          <span class="stat-kicker">STEM Accuracy</span>
+          <span class="stat-number" id="gap-stat-accuracy">0%</span>
+          <span class="stat-desc">Overall success rate</span>
+        </div>
+        <div class="detector-stat-card highlight-gap">
+          <span class="stat-kicker">Active Knowledge Gaps</span>
+          <span class="stat-number" id="gap-stat-gaps">0</span>
+          <span class="stat-desc">Concepts requiring revision</span>
+        </div>
+        <div class="detector-stat-card highlight-strong">
+          <span class="stat-kicker">Mastered Concepts</span>
+          <span class="stat-number" id="gap-stat-mastered">0</span>
+          <span class="stat-desc">High proficiency verified</span>
+        </div>
+      </div>
+
+      <!-- Subject Mastery Breakdown Bars -->
+      <div class="detector-subject-bars-card">
+        <h3 class="detector-card-title">Subject Understanding Spectrum</h3>
+        <p class="detector-card-desc">Visual balance of mastered versus developing topics across the four curriculum disciplines.</p>
+        <div class="detector-subjects-grid" id="detector-subjects-grid">
+          <!-- Dynamically populated by script.js -->
+        </div>
+      </div>
+
+      <!-- Main Action Section: Priority Gaps & Revision Recommendations -->
+      <section class="detector-recommendations-section">
+        <div class="section-title-wrap">
+          <span class="section-kicker">Targeted Remediation</span>
+          <h3 class="detector-section-title">Priority Knowledge Gaps</h3>
+          <p class="detector-section-sub">Topics where recent answers indicate misconceptions or incomplete retention. Review the recommended lesson and re-test to clear the gap.</p>
+        </div>
+
+        <div class="gap-cards-container" id="gap-cards-container">
+          <!-- Dynamically populated by script.js based on actual results -->
+        </div>
+      </section>
+
+      <!-- Strong Areas Section -->
+      <section class="detector-strong-section">
+        <div class="section-title-wrap">
+          <span class="section-kicker">Demonstrated Competency</span>
+          <h3 class="detector-section-title">Verified Strong Areas</h3>
+          <p class="detector-section-sub">Concepts where you have consistently answered correctly across quizzes and challenges.</p>
+        </div>
+
+        <div class="strong-cards-grid" id="strong-cards-grid">
+          <!-- Dynamically populated by script.js -->
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- VIEW 7: THE DETECTIVE BUREAU VIEW (SPA)                      -->
+  <!-- ============================================================ -->
+  <div class="page-view" id="detective-bureau-view">
+    <header class="tool-view-header detective-bureau-header">
+      <div class="tool-header-container">
+        <button class="btn btn-back-subjects" id="btn-back-from-detective" aria-label="Return to homepage">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+          </svg>
+          <span id="detective-back-btn-label">Back to Home</span>
+        </button>
+
+        <div class="tool-header-meta">
+          <span class="tool-pill-tag">Investigate &bull; Discover &bull; Understand</span>
+          <h2 class="tool-header-title">THE DETECTIVE BUREAU</h2>
+        </div>
+
+        <div class="detective-header-credentials">
+          <span class="detective-rank-pill" id="bureau-header-rank">Field Cadet</span>
+          <div class="mistake-header-score">
+            <span class="score-label">Detective Score:</span>
+            <span class="score-val" id="bureau-header-score">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="tool-arena-container detective-bureau-container">
+
+      <!-- SUB-VIEW A: DETECTIVE BUREAU LANDING & CASE ARCHIVE -->
+      <div id="detective-bureau-landing">
+        <!-- Bureau Briefing Banner & Live Metrics -->
+        <section class="bureau-hero-banner">
+          <div class="bureau-hero-text">
+            <span class="bureau-division-tag">STEM Investigative Division</span>
+            <h1 class="bureau-main-heading">THE DETECTIVE BUREAU &mdash; Investigate. Discover. Understand.</h1>
+            <p class="bureau-main-sub">
+              Open classified technical case files across Programming, Computer Science, Mathematics, and Technology. Collect empirical evidence, execute diagnostic probes, connect clues, and uncover the academic principles behind every anomaly.
+            </p>
+          </div>
+
+          <div class="bureau-stats-strip">
+            <div class="bureau-stat-card">
+              <span class="b-stat-kicker">Detective Score</span>
+              <span class="b-stat-val" id="bureau-stat-score">0</span>
+              <span class="b-stat-sub" id="bureau-stat-rank-sub">Rank: Field Cadet</span>
+            </div>
+            <div class="bureau-stat-card">
+              <span class="b-stat-kicker">Active Investigations</span>
+              <span class="b-stat-val" id="bureau-stat-active">0</span>
+              <span class="b-stat-sub" id="bureau-stat-attempted-sub">0 Cases Attempted</span>
+            </div>
+            <div class="bureau-stat-card highlight-solved">
+              <span class="b-stat-kicker">Solved Cases</span>
+              <span class="b-stat-val" id="bureau-stat-solved">0 / 12</span>
+              <span class="b-stat-sub" id="bureau-stat-tiers-sub">0 Tiers Cleared</span>
+            </div>
+            <div class="bureau-stat-card">
+              <span class="b-stat-kicker">Investigation Accuracy</span>
+              <span class="b-stat-val" id="bureau-stat-accuracy">0%</span>
+              <span class="b-stat-sub" id="bureau-stat-decisions-sub">0 Incorrect Decisions</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Subject & Difficulty Breakdown Bar -->
+        <section class="bureau-breakdown-card">
+          <div class="bureau-breakdown-grid" id="bureau-subject-breakdown">
+            <!-- Dynamically populated by script.js -->
+          </div>
+        </section>
+
+        <!-- Case File Filter & Status Controls -->
+        <section class="bureau-filters-bar">
+          <div class="bureau-status-tabs" id="detective-status-tabs" role="tablist" aria-label="Filter cases by investigation status">
+            <button class="bureau-status-tab active" data-case-status="all" role="tab" aria-selected="true">
+              <span>All Case Files</span>
+              <span class="tab-count-badge" id="tab-count-all">12</span>
+            </button>
+            <button class="bureau-status-tab" data-case-status="active" role="tab" aria-selected="false">
+              <span>Active Investigations</span>
+              <span class="tab-count-badge" id="tab-count-active">0</span>
+            </button>
+            <button class="bureau-status-tab" data-case-status="solved" role="tab" aria-selected="false">
+              <span>Solved Cases</span>
+              <span class="tab-count-badge" id="tab-count-solved">0</span>
+            </button>
+          </div>
+
+          <div class="mistake-filter-strip bureau-sub-diff-filters">
+            <div class="filter-group">
+              <span class="filter-lbl">Subject:</span>
+              <div class="filter-pills" id="detective-subject-filters">
+                <button class="filter-pill active" data-detective-subject="all">All</button>
+                <button class="filter-pill" data-detective-subject="programming">Programming</button>
+                <button class="filter-pill" data-detective-subject="computer-science">Computer Science</button>
+                <button class="filter-pill" data-detective-subject="mathematics">Mathematics</button>
+                <button class="filter-pill" data-detective-subject="technology">Technology</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <span class="filter-lbl">Difficulty:</span>
+              <div class="filter-pills" id="detective-difficulty-filters">
+                <button class="filter-pill active" data-detective-diff="all">All</button>
+                <button class="filter-pill" data-detective-diff="Beginner">Beginner</button>
+                <button class="filter-pill" data-detective-diff="Intermediate">Intermediate</button>
+                <button class="filter-pill" data-detective-diff="Advanced">Advanced</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Case Files Collection Grid -->
+        <section class="detective-cases-grid" id="detective-cases-grid" aria-label="Available Case Files">
+          <!-- Dynamically populated by script.js -->
+        </section>
+      </div>
+
+      <!-- SUB-VIEW B: ACTIVE CASE INVESTIGATION WORKBENCH -->
+      <div id="detective-case-workbench" style="display: none;">
+        <!-- Dynamically populated by script.js when a case is opened -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Diagnostic & Retake Interactive Modal -->
+  <div class="modal-backdrop" id="diagnostic-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-diagnostic-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-kicker" id="modal-diagnostic-kicker">STEM Diagnostic</span>
+          <h2 class="modal-title" id="modal-diagnostic-title">Targeted Topic Evaluation</h2>
+        </div>
+        <button class="modal-close-btn" id="modal-diagnostic-close-btn" aria-label="Close test">✕</button>
+      </div>
+      <div class="modal-body" id="modal-diagnostic-body">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- MODAL: STUDENT PROGRESS DASHBOARD                            -->
+  <!-- ============================================================ -->
+  <div class="modal-backdrop" id="progress-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-progress-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-kicker">Student Dashboard</span>
+          <h2 class="modal-title" id="modal-progress-title">Learning Journey & Progress</h2>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dashboard">✕</button>
+      </div>
+
+      <div class="modal-body">
+        
+        <!-- Overall Progress Summary -->
+        <div class="dashboard-overview-card">
+          <div class="overview-chart">
+            <svg class="donut-chart" viewBox="0 0 36 36">
+              <path class="donut-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <path class="donut-fill" id="dashboard-donut-fill" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <text x="18" y="20.35" class="donut-percent" id="dashboard-donut-text">0%</text>
+            </svg>
+          </div>
+          <div class="overview-details">
+            <h3 class="overview-heading" id="dashboard-rank-title">Beginner Scholar</h3>
+            <p class="overview-subtext">Track your lesson completion, quiz test mastery, detective investigations, and game achievements across all disciplines.</p>
+            <div class="stats-counter-strip">
+              <div class="stat-pill">
+                <span class="stat-num" id="stat-completed-lessons">0/21</span>
+                <span class="stat-lbl">Lessons Completed</span>
+              </div>
+              <div class="stat-pill">
+                <span class="stat-num" id="stat-avg-quiz">0%</span>
+                <span class="stat-lbl">Average Quiz Score</span>
+              </div>
+              <div class="stat-pill">
+                <span class="stat-num" id="stat-games-played">0</span>
+                <span class="stat-lbl">Games Won</span>
+              </div>
+              <div class="stat-pill">
+                <span class="stat-num" id="stat-mistakes-solved">0/16</span>
+                <span class="stat-lbl">Mistakes Solved</span>
+              </div>
+              <div class="stat-pill">
+                <span class="stat-num" id="stat-detective-solved">0/12</span>
+                <span class="stat-lbl">Cases Solved</span>
+              </div>
+              <div class="stat-pill">
+                <span class="stat-num" id="stat-gaps-status">0 Active</span>
+                <span class="stat-lbl">Knowledge Gaps</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subject Breakdown List -->
+        <h4 class="modal-section-title">Subject Mastery</h4>
+        <div class="dashboard-subject-list" id="dashboard-subject-list">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Detective Bureau Progress Summary -->
+        <h4 class="modal-section-title">Detective Bureau Record</h4>
+        <div class="dashboard-detective-summary" id="dashboard-detective-summary">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Badges & Achievements -->
+        <h4 class="modal-section-title">Earned Badges</h4>
+        <div class="badges-grid" id="dashboard-badges-grid">
+          <!-- Dynamically populated -->
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline" id="btn-reset-dashboard-data">Reset All Progress</button>
+        <button class="btn btn-primary" id="btn-close-modal">Continue Learning</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- App Script -->
+  <script src="script.js"></script>
+</body>
+</html>
